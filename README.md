@@ -9,11 +9,29 @@ The purpose of all projects in this repo is to either serve as references to loo
 These projects are built either mostly or entirely with HTML5 and CSS3.
 Depending on the project, other technologies might be used in which case the technologies used will be mentioned for each project.
 
-* Meta Photography
+### Meta Photography
 
-This is a responsive, mobile first website built entirely using HTML5, CSS3 and a little bit of vanilla javascript for smooth scrolling.
+This is a responsive, mobile first website with smooth scrolling. 
 
-* Parallax Website
+Built with:
+* HTML5
+* CSS3
+* JavaScript
 
-A responsive parallax website. on smaller screen sizes parallax is disabled.
-This project is built using only HTML5 and CSS3.
+### Parallax Website
+
+A responsive parallax website. On smaller screen sizes parallax is disabled.
+
+Built with:
+* HTML5
+* CSS3
+
+### Responsive Contact Form
+
+A mobile first, responsive demo contact form with a tiny bit of animation.
+
+Built with:
+* HTML5
+* CSS3 (Grid)
+* Animate.css
+* Font Awesome Icons
