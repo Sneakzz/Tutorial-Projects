@@ -35,3 +35,13 @@ Built with:
 * CSS3 (Grid)
 * Animate.css
 * Font Awesome Icons
+
+## SkeletonCSS Crash Course
+
+This project contains a cheat sheet and simple website landing page showing off the Skeleton CSS framework.
+
+Built with:
+* HTML5
+* CSS3
+* SkeletonCSS
+* Font Awesome Icons
