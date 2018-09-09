@@ -13,7 +13,7 @@ Depending on the project, other technologies might be used in which case the tec
 
 This is a responsive, mobile first website with smooth scrolling. 
 
-Built with:
+#### Built with:
 * HTML5
 * CSS3
 * JavaScript
@@ -22,7 +22,7 @@ Built with:
 
 A responsive parallax website. On smaller screen sizes parallax is disabled.
 
-Built with:
+#### Built with:
 * HTML5
 * CSS3
 
@@ -30,7 +30,7 @@ Built with:
 
 A mobile first, responsive demo contact form with a tiny bit of animation.
 
-Built with:
+#### Built with:
 * HTML5
 * CSS3 (Grid)
 * Animate.css
@@ -44,7 +44,7 @@ This project has two parts.
 
 One part is a cheat sheet html file showing off some of the different materialize classes, how they're used and what they do.
 
-Built with:
+#### Built with:
 * HTML5
 * MaterializeCSS
 
@@ -54,7 +54,7 @@ Built with:
 
 This project contains a cheat sheet and simple website landing page showing off the Skeleton CSS framework.
 
-Built with:
+#### Built with:
 * HTML5
 * SkeletonCSS
 * Font Awesome Icons
