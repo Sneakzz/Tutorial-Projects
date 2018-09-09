@@ -36,12 +36,25 @@ Built with:
 * Animate.css
 * Font Awesome Icons
 
+## MaterializeCSS Crash Course
+
+[MaterializeCSS](https://materializecss.com/)
+
+This project has two parts. 
+
+One part is a cheat sheet html file showing off some of the different materialize classes, how they're used and what they do.
+
+Built with:
+* HTML5
+* MaterializeCSS
+
 ## SkeletonCSS Crash Course
+
+[GetSkeleton](http://getskeleton.com/)
 
 This project contains a cheat sheet and simple website landing page showing off the Skeleton CSS framework.
 
 Built with:
 * HTML5
-* CSS3
 * SkeletonCSS
 * Font Awesome Icons
