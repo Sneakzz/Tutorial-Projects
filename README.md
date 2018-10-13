@@ -36,7 +36,7 @@ A mobile first, responsive demo contact form with a tiny bit of animation.
 * Animate.css
 * Font Awesome Icons
 
-## MaterializeCSS Crash Course
+### MaterializeCSS Crash Course
 
 [MaterializeCSS](https://materializecss.com/)
 
@@ -48,7 +48,7 @@ One part is a cheat sheet html file showing off some of the different materializ
 * HTML5
 * MaterializeCSS
 
-## SkeletonCSS Crash Course
+### SkeletonCSS Crash Course
 
 [GetSkeleton](http://getskeleton.com/)
 
