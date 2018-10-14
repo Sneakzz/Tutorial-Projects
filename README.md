@@ -8,6 +8,21 @@ The purpose of all projects in this repo is to either serve as references to loo
 These projects are built either mostly or entirely with HTML5, CSS3 and JavaScript.
 Depending on the project, other technologies might be used in which case those technologies will be mentioned for each project.
 
+### HTML5 Crash Course
+
+A two page project that contains multiple examples showing off different features and syntax of the HTML5 language.
+
+#### Built with:
+* HTML5
+
+### CSS3 Crash Course
+
+A project that has one page with examples and references and another page that is an example website showing off even more of what can be achieved with CSS3.
+
+#### Built with:
+* HTML5
+* CSS3
+
 ### Meta Photography
 
 This is a responsive, mobile first website with smooth scrolling. 
