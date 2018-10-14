@@ -1,13 +1,12 @@
 # Tutorial Projects
 
-This repo will contain all tutorial/guide projects i create as part of learning a new language and/or technology.
+This repo will contain all tutorial/guide projects i create as part of learning a new language, technology, framework, etc...
 
-The purpose of all projects in this repo is to either serve as references to look back on or to get the first hands-on experience with a new language and/or technology.
+The purpose of all projects in this repo is to either serve as references to look back on or to get the first hands-on experience with a new language, technology and/or framework.
 
-## HTML & CSS
-
-These projects are built either mostly or entirely with HTML5 and CSS3.
-Depending on the project, other technologies might be used in which case the technologies used will be mentioned for each project.
+## HTML5, CSS3, JavaScript and more! 
+These projects are built either mostly or entirely with HTML5, CSS3 and JavaScript.
+Depending on the project, other technologies might be used in which case those technologies will be mentioned for each project.
 
 ### Meta Photography
 
@@ -42,11 +41,18 @@ A mobile first, responsive demo contact form with a tiny bit of animation.
 
 This project has two parts. 
 
-One part is a cheat sheet html file showing off some of the different materialize classes, how they're used and what they do.
+Part one contains an overview HTML file showing off some of the different materialize classes, how they're used and what they do.
 
 #### Built with:
 * HTML5
 * MaterializeCSS
+
+Part two contains an overview HTML file showing off some of the different materialize JavaScript plugins, how to use them (with examples), what they do, how to configure them and more!
+
+#### Built with:
+* HTML5
+* MaterializeCSS
+* JavaScript
 
 ### SkeletonCSS Crash Course
 
