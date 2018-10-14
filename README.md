@@ -79,3 +79,15 @@ This project contains a cheat sheet and simple website landing page showing off 
 * HTML5
 * SkeletonCSS
 * Font Awesome Icons
+
+### Travel Agency Theme With Materialize CSS
+
+A travel agency themed website showing off the Materialize CSS framework and some of its features.
+Vanilla JavaScript was used to initialize different plugins from the framework.
+
+#### Built with:
+* HTML5
+* CSS3
+* JavaScript
+* Materialize CSS
+* Font Awesome Icons
