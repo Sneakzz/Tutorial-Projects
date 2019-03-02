@@ -91,3 +91,13 @@ Vanilla JavaScript was used to initialize different plugins from the framework.
 * JavaScript
 * Materialize CSS
 * Font Awesome Icons
+
+### First Portfolio Website
+
+The very first portfolio website i created as part of learning front-end web development.
+
+#### Built with:
+* HTML5
+* CSS3
+* JavaScript
+* Font Awesome Icons
