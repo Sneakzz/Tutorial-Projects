@@ -1,0 +1,11 @@
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\bin\Debug\netcoreapp2.2\NumbersInCSharp.deps.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\bin\Debug\netcoreapp2.2\NumbersInCSharp.runtimeconfig.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\bin\Debug\netcoreapp2.2\NumbersInCSharp.runtimeconfig.dev.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\bin\Debug\netcoreapp2.2\NumbersInCSharp.dll
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\bin\Debug\netcoreapp2.2\NumbersInCSharp.pdb
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\obj\Debug\netcoreapp2.2\NumbersInCSharp.csprojAssemblyReference.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\obj\Debug\netcoreapp2.2\NumbersInCSharp.csproj.CoreCompileInputs.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\obj\Debug\netcoreapp2.2\NumbersInCSharp.AssemblyInfoInputs.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\obj\Debug\netcoreapp2.2\NumbersInCSharp.AssemblyInfo.cs
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\obj\Debug\netcoreapp2.2\NumbersInCSharp.dll
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\numbers-quickstart\obj\Debug\netcoreapp2.2\NumbersInCSharp.pdb
