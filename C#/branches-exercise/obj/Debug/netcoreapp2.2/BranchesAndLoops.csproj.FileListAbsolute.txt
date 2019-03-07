@@ -1,0 +1,11 @@
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\bin\Debug\netcoreapp2.2\BranchesAndLoops.deps.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\bin\Debug\netcoreapp2.2\BranchesAndLoops.runtimeconfig.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\bin\Debug\netcoreapp2.2\BranchesAndLoops.runtimeconfig.dev.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\bin\Debug\netcoreapp2.2\BranchesAndLoops.dll
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\bin\Debug\netcoreapp2.2\BranchesAndLoops.pdb
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\obj\Debug\netcoreapp2.2\BranchesAndLoops.csprojAssemblyReference.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\obj\Debug\netcoreapp2.2\BranchesAndLoops.csproj.CoreCompileInputs.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\obj\Debug\netcoreapp2.2\BranchesAndLoops.AssemblyInfoInputs.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\obj\Debug\netcoreapp2.2\BranchesAndLoops.AssemblyInfo.cs
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\obj\Debug\netcoreapp2.2\BranchesAndLoops.dll
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\branches-exercise\obj\Debug\netcoreapp2.2\BranchesAndLoops.pdb
