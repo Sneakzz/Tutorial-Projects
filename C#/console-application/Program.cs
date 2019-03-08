@@ -12,7 +12,9 @@ namespace TeleprompterConsole
             var lines = ReadFrom("sampleQuotes.txt");
 
             foreach (var line in lines) {
+                // using WriteLine(line) every word is on its own line
                 Console.WriteLine(line);
+                //Console.Write(line);
 
                 if (!string.IsNullOrWhiteSpace(line)) {
                     var pause = Task.Delay(200);
@@ -39,6 +41,8 @@ namespace TeleprompterConsole
                         yield return word + " ";
                         lineLength += word.Length + 1;
 
+                        // change this value to adjust the length of each outputted line when using Write(line) in the main method
+                        // OR to break chunks of text up into smaller or bigger pieces when using WriteLine(line) in the main method
                         if (lineLength > 70) {
                             yield return Environment.NewLine;
                             lineLength = 0;
