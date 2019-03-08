@@ -1,0 +1,11 @@
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\bin\Debug\netcoreapp2.2\classes.deps.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\bin\Debug\netcoreapp2.2\classes.runtimeconfig.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\bin\Debug\netcoreapp2.2\classes.runtimeconfig.dev.json
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\bin\Debug\netcoreapp2.2\classes.dll
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\bin\Debug\netcoreapp2.2\classes.pdb
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\obj\Debug\netcoreapp2.2\classes.csprojAssemblyReference.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\obj\Debug\netcoreapp2.2\classes.csproj.CoreCompileInputs.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\obj\Debug\netcoreapp2.2\classes.AssemblyInfoInputs.cache
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\obj\Debug\netcoreapp2.2\classes.AssemblyInfo.cs
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\obj\Debug\netcoreapp2.2\classes.dll
+E:\Desktop Backup\programming\gitRepos\Learning Projects\C#\classes\obj\Debug\netcoreapp2.2\classes.pdb
