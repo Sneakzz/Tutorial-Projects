@@ -14,10 +14,22 @@ namespace WebAPIClient
         static void Main(string[] args)
         {
             // the program can not stop before the Task has completed so use .Wait()
-            ProcessRepositories().Wait();
+            var repositories = ProcessRepositories().Result;
+
+            // displaying the repository names to the console
+            foreach (var repo in repositories)
+            {
+                Console.WriteLine(repo.Name);
+                Console.WriteLine(repo.Description);
+                Console.WriteLine(repo.GithubHomeUrl);
+                Console.WriteLine(repo.Homepage);
+                Console.WriteLine(repo.Watchers);
+                Console.WriteLine(repo.LastPush);
+                Console.WriteLine();
+            }
         }
 
-        private static async Task ProcessRepositories()
+        private static async Task<List<Repository>> ProcessRepositories()
         {
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
@@ -25,18 +37,14 @@ namespace WebAPIClient
             client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
 
             // creating the JSON serializer
-            var serializer = new DataContractJsonSerializer(typeof(List<Repo>));
+            var serializer = new DataContractJsonSerializer(typeof(List<Repository>));
 
             // get a stream instead of string since the serializer uses a stream as its source
             var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
             // use the serializer to convert JSON into C# objects
-            var repositories = serializer.ReadObject(await streamTask) as List<Repo>;
+            var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
 
-            // displaying the name of each repository
-            foreach (var repo in repositories)
-            {
-                Console.WriteLine(repo.name);
-            }
+            return repositories;
         }
     }
 
