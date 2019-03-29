@@ -13,7 +13,7 @@ namespace WebAPIClient
         private static readonly HttpClient client = new HttpClient();
         static void Main(string[] args)
         {
-            // the program can not stop before the Task has completed so use .Wait()
+            // get the result value of this task
             var repositories = ProcessRepositories().Result;
 
             // displaying the repository names to the console
