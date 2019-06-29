@@ -28,8 +28,8 @@ namespace CSharpTut8
 
         static void Main(string[] args)
         {
-            Warrior maximus = new Warrior("Maximus", 1000, 120, 40);
-            Warrior bob = new Warrior("Bob", 1000, 120, 40);
+            Warrior maximus = new Warrior("Playable Character", 150, 55, 50);
+            Warrior bob = new Warrior("JAD", 150, 55, 50);
 
             Battle.StartFight(maximus, bob);
 
