@@ -1,0 +1,130 @@
+﻿<Window x:Class="WpfTutorial3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTutorial3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" SizeToContent="WidthAndHeight"
+            Topmost="False" WindowState="Normal" Icon="./Resources/game.ico">
+
+    <!-- When creating a menu bar, put "_" before the shortcut key which is triggered with Alt + whatever-->
+    <!-- 1. Get the Visual Studio Image Library if you want standard icons
+	A. https://www.microsoft.com/en-us/download/details.aspx?id=35825
+    B. I used VS2013 Image Library.zip 
+    -->
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem x:Name="menuNew" Header="_New" InputGestureText="Ctrl+N">
+                    <MenuItem.Icon>
+                        <Image Source="./Resources/NewCard.bmp"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="menuOpen" Header="_Open" InputGestureText="Ctrl+O" Click="MenuOpen_Click">
+                    <MenuItem.Icon>
+                        <Image Source="./Resources/Open.bmp"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="menuSave" Header="_Save" InputGestureText="Ctrl+S" Click="MenuSave_Click">
+                    <MenuItem.Icon>
+                        <Image Source="./Resources/Save.bmp"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="menuExit" Header="E_xit" Click="MenuExit_Click">
+                </MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="_Edit">
+                <MenuItem x:Name="menuCut" Header="Cut" Command="ApplicationCommands.Cut"
+                          InputGestureText="Ctrl+X"/>
+                <MenuItem x:Name="menuCopy" Header="Copy" Command="ApplicationCommands.Copy"
+                          InputGestureText="Ctrl+C"/>
+                <MenuItem x:Name="menuPaste" Header="Paste" Command="ApplicationCommands.Paste"
+                          InputGestureText="Ctrl+V"/>
+                <Separator />
+                <MenuItem Header="_Font" InputGestureText="Ctrl+F">
+                    <MenuItem x:Name="menuFontTimes" Header="Times" IsCheckable="True"
+                              StaysOpenOnClick="True" Click="MenuFontTimes_Click"/>
+                    <MenuItem x:Name="menuFontCourier" Header="Courier" IsCheckable="True"
+                              StaysOpenOnClick="True" Click="MenuFontCourier_Click"/>
+                    <MenuItem x:Name="menuFontArial" Header="Arial" IsCheckable="True"
+                              StaysOpenOnClick="True" Click="MenuFontArial_Click"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <!-- NEW STUFF -->
+        
+        <!-- A toolbar provides quick access to tools -->
+        <!-- You can also dock on the left or right -->
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button x:Name="tbOpen" ToolTip="Open File" Click="MenuOpen_Click">
+                    <Image Source="./Resources/Open.bmp"></Image>
+                </Button>
+                <Button x:Name="tbSave" ToolTip="Save File" Click="MenuSave_Click">
+                    <Image Source="./Resources/Save.bmp"></Image>
+                </Button>
+                <Button x:Name="tbCut" Command="ApplicationCommands.Cut">
+                    <Image Source="./Resources/Cut.bmp"></Image>
+                </Button>
+                <Button x:Name="tbCopy" Command="ApplicationCommands.Copy">
+                    <Image Source="./Resources/Copy.bmp"></Image>
+                </Button>
+                <Button x:Name="tbPaste" Command="ApplicationCommands.Paste">
+                    <Image Source="./Resources/Paste.bmp"></Image>
+                </Button>
+                <Separator/>
+                <Label>Font Size: </Label>
+                <ComboBox x:Name="comboFontSize" SelectionChanged="ComboFontSize_SelectionChanged"
+                          DropDownClosed="ComboFontSize_DropDownClosed">
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem IsSelected="True">12</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                </ComboBox>
+            </ToolBar>
+        </ToolBarTray>
+
+        <TextBox x:Name="txtBoxDoc" Height="290" Width="500" FontSize="12"/>
+    </DockPanel>
+
+    <!-- You can create rows and columns in the Grid layout by just clicking the borders -->
+
+    <!-- You can drag a label in a cell, copy and paste some more while changing the margins,
+         select them and right click -> Group Into -> ScrollViewer -->
+
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="226*"/>
+            <ColumnDefinition Width="160*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="2" Margin="10,10,10,234">
+            <Grid>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="0,0,-17,0"
+                    VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="0,25,-17,0"
+                    VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="0,50,-17,0"
+                    VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="0,75,-17,0"
+                    VerticalAlignment="Top"/>
+                <Label Content="Label" HorizontalAlignment="Left" Margin="0,100,-17,0"
+                    VerticalAlignment="Top"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>-->
+
+    <!-- A DockPanel is normally used as a container for other panels -->
+    <!--<DockPanel>
+        <Label x:Name="lblTop" DockPanel.Dock="Top" Content="TOP"/>
+        <Label x:Name="lblLeft" DockPanel.Dock="Left" Content="LEFT"/>
+        <Label x:Name="lblRight" DockPanel.Dock="Right" Content="RIGHT"/>
+        <Label x:Name="lblBottom" DockPanel.Dock="Bottom" Content="BOTTOM"/>
+        <Label x:Name="lblCenter" Content="CENTER"/>
+    </DockPanel>-->
+
+</Window>
