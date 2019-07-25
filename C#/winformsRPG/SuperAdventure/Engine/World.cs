@@ -23,6 +23,7 @@ namespace Engine
         public const int ITEM_ID_SPIDER_FANG = 8;
         public const int ITEM_ID_SPIDER_SILK = 9;
         public const int ITEM_ID_ADVENTURER_PASS = 10;
+        public const int ITEM_ID_OP_TESTWEAPON = 11;
 
         public const int MONSTER_ID_RAT = 1;
         public const int MONSTER_ID_SNAKE = 2;
@@ -61,6 +62,7 @@ namespace Engine
 
             Items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Rusty sword", "Rusty swords", 0, 5));
             Items.Add(new Weapon(ITEM_ID_CLUB, "Club", "Clubs", 3, 10));
+            Items.Add(new Weapon(ITEM_ID_OP_TESTWEAPON, "OP sword", "OP swords", 75, 100));
 
             Items.Add(new HealingPotion(ITEM_ID_HEALING_POTION, "Healing potion", "Healing potions", 5));
         }

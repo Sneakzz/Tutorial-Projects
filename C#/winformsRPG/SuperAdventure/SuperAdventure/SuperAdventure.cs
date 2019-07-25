@@ -25,6 +25,8 @@ namespace SuperAdventure
             _player = new Player(10, 10, 20, 0);
             MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
             _player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
+            _player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_OP_TESTWEAPON), 1));
+            _player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_HEALING_POTION), 1));
 
             UpdatePlayerStats();
         }
@@ -283,7 +285,7 @@ namespace SuperAdventure
                 cboWeapons.DisplayMember = "Name";
                 cboWeapons.ValueMember = "ID";
 
-                cboWeapons.SelectedIndex = 0;
+                cboWeapons.SelectedIndex = weapons.Count - 1;
             }
         }
 
