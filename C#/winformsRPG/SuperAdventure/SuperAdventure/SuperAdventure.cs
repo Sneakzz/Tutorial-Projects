@@ -289,11 +289,26 @@ namespace SuperAdventure
             }
             else
             {
+                // Remove the function connected to dropdown's "SelectedIndexChanged" event
+                cboWeapons.SelectedIndexChanged -= cboWeapons_SelectedIndexChanged;
+
+                // Setting the DataSource property of a dropdown calls the function connected to the event.
+                // The event can only be called when the player manually changes the value
                 cboWeapons.DataSource = weapons;
+
+                // Add the event handler function back to the event, this way it will run when the player changes the value.
+                cboWeapons.SelectedIndexChanged += cboWeapons_SelectedIndexChanged;
                 cboWeapons.DisplayMember = "Name";
                 cboWeapons.ValueMember = "ID";
 
-                cboWeapons.SelectedIndex = weapons.Count - 1;
+                if (_player.CurrentWeapon != null)
+                {
+                    cboWeapons.SelectedItem = _player.CurrentWeapon;
+                }
+                else
+                {
+                    cboWeapons.SelectedIndex = 0;
+                }
             }
         }
 
@@ -511,6 +526,11 @@ namespace SuperAdventure
         private void SuperAdventure_FormClosing(object sender, FormClosingEventArgs e)
         {
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
+        }
+
+        private void cboWeapons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _player.CurrentWeapon = (Weapon)cboWeapons.SelectedItem;
         }
     }
 }
