@@ -42,6 +42,16 @@ namespace Engine
         public Location CurrentLocation { get; set; }
         public Weapon CurrentWeapon { get; set; }
 
+        public List<Weapon> Weapons
+        {
+            get { return Inventory.Where(x => x.Details is Weapon).Select(x => x.Details as Weapon).ToList(); }
+        }
+
+        public List<HealingPotion> Potions
+        {
+            get { return Inventory.Where(x => x.Details is HealingPotion).Select(x => x.Details as HealingPotion).ToList(); }
+        }
+
         public BindingList<InventoryItem> Inventory { get; set; }
         public BindingList<PlayerQuest> Quests { get; set; }
 
@@ -176,30 +186,32 @@ namespace Engine
         {
             foreach (QuestCompletionItem qci in quest.QuestCompletionItems)
             {
+                // Subtract the quantity from the player's inventory that was needed to complete the quest
                 InventoryItem item = Inventory.SingleOrDefault(ii => ii.Details.ID == qci.Details.ID);
 
                 if (item != null)
                 {
-                    // Subtract the quantity from the player's inventory that was needed to complete the quest
-                    item.Quantity -= qci.Quantity;
+                    RemoveItemFromInventory(item.Details, qci.Quantity);
                 }
             }
         }
 
-        public void AddItemToInventory(Item itemToAdd)
+        public void AddItemToInventory(Item itemToAdd, int quantity = 1)
         {
             InventoryItem item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToAdd.ID);
 
             if (item == null)
             {
                 // The player does not already have the item, so add it to the inventory, with a quantity of 1
-                Inventory.Add(new InventoryItem(itemToAdd, 1));
+                Inventory.Add(new InventoryItem(itemToAdd, quantity));
             }
             else
             {
                 // The player has the item in their inventory, so increase the quantity by one
-                item.Quantity++;
+                item.Quantity += quantity;
             }
+
+            RaiseInventoryChangedEvent(itemToAdd);
         }
 
         public void MarkQuestCompleted(Quest quest)
@@ -295,6 +307,51 @@ namespace Engine
 
             // The XML document, as a string, so we can save the data to disk
             return playerData.InnerXml;
+        }
+
+        private void RaiseInventoryChangedEvent(Item item)
+        {
+            if (item is Weapon)
+            {
+                OnPropertyChanged("Weapons");
+            }
+
+            if (item is HealingPotion)
+            {
+                OnPropertyChanged("Potions");
+            }
+        }
+
+        public void RemoveItemFromInventory(Item itemToRemove, int quantity = 1)
+        {
+            InventoryItem item = Inventory.SingleOrDefault(ii => ii.Details.ID == itemToRemove.ID);
+
+            if (item == null)
+            {
+                // The item is not in the player's inventory.
+                // Maybe raise an error for this situation.
+            }
+            else
+            {
+                // The player has the item in their inventory, so decrease its quantity
+                item.Quantity -= quantity;
+
+                // Don't allow negative quantities.
+                // Maybe raise an error for this situation
+                if (item.Quantity < 0)
+                {
+                    item.Quantity = 0;
+                }
+
+                // If the quantity is zero, remove the item from the list
+                if (item.Quantity == 0)
+                {
+                    Inventory.Remove(item);
+                }
+
+                // Notify the UI that the inventory has changed
+                RaiseInventoryChangedEvent(itemToRemove);
+            }
         }
     }
 }
