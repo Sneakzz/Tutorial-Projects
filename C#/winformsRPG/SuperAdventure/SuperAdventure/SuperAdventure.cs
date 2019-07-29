@@ -34,9 +34,13 @@ namespace SuperAdventure
                 _player = Player.CreateDefaultPlayer();
             }
 
-            MoveTo(_player.CurrentLocation);
+            // connect the text property of lblHitPoints to the CurrentHitPoints property of the _player object
+            lblHitPoints.DataBindings.Add("Text", _player, "CurrentHitPoints");
+            lblGold.DataBindings.Add("Text", _player, "Gold");
+            lblExperience.DataBindings.Add("Text", _player, "ExperiencePoints");
+            lblLevel.DataBindings.Add("Text", _player, "Level");
 
-            UpdatePlayerStats();
+            MoveTo(_player.CurrentLocation);
         }
 
         private void btnNorth_Click(object sender, EventArgs e)
@@ -85,9 +89,6 @@ namespace SuperAdventure
 
             // Completely heal the player
             _player.CurrentHitPoints = _player.MaximumHitPoints;
-
-            // Update HitPoints in the UI
-            lblHitPoints.Text = _player.CurrentHitPoints.ToString();
 
             // Upon switching location, check for a quest
             if (newLocation.QuestAvailableHere != null)
@@ -196,9 +197,6 @@ namespace SuperAdventure
                 btnUsePotion.Visible = false;
             }
 
-            // Refresh player's stats
-            UpdatePlayerStats();
-
             // Refresh the player's inventory list
             UpdateInventoryListInUI();
 
@@ -215,7 +213,6 @@ namespace SuperAdventure
         private void UpdatePlayerStats()
         {
             // Refresh player information and inventory controls
-            lblHitPoints.Text = _player.CurrentHitPoints.ToString();
             lblGold.Text = _player.Gold.ToString();
             lblExperience.Text = _player.ExperiencePoints.ToString();
             lblLevel.Text = _player.Level.ToString();
@@ -416,7 +413,6 @@ namespace SuperAdventure
                 }
 
                 // Refresh the player information and inventory controls
-                UpdatePlayerStats();
                 UpdateInventoryListInUI();
                 UpdateWeaponListInUI();
                 UpdatePotionListInUI();
@@ -443,9 +439,6 @@ namespace SuperAdventure
 
                 // Subtract damage from player
                 _player.CurrentHitPoints -= damageToPlayer;
-
-                // Refresh player data in UI
-                lblHitPoints.Text = _player.CurrentHitPoints.ToString();
 
                 if (_player.CurrentHitPoints <= 0)
                 {
@@ -512,7 +505,6 @@ namespace SuperAdventure
             }
 
             // Refresh player data in UI
-            lblHitPoints.Text = _player.CurrentHitPoints.ToString();
             UpdateInventoryListInUI();
             UpdatePotionListInUI();
         }
