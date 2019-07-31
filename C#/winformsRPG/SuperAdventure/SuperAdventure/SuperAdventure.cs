@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-// Add the using Engine statement so this class knows where the Player class is located.
+﻿// Add the using Engine statement so this class knows where the Player class is located.
 using Engine;
-
+using System;
+using System.ComponentModel;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SuperAdventure
 {
