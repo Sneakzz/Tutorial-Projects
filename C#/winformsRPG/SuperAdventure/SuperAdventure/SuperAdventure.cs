@@ -160,6 +160,8 @@ namespace SuperAdventure
                     btnUseWeapon.Visible = _player.Weapons.Any();
                     btnUsePotion.Visible = _player.Potions.Any();
                 }
+
+                btnTrade.Visible = (_player.CurrentLocation.VendorWorkingHere != null);
             }
         }
 
@@ -211,7 +213,9 @@ namespace SuperAdventure
 
         private void btnTrade_Click(object sender, EventArgs e)
         {
-
+            TradingScreen tradingScreen = new TradingScreen(_player);
+            tradingScreen.StartPosition = FormStartPosition.CenterParent;
+            tradingScreen.ShowDialog(this);
         }
     }
 }
