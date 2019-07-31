@@ -18,6 +18,14 @@ namespace Engine
 
         public int MaximumHitPoints { get; set; }
 
+        public bool IsDead { get { return CurrentHitPoints <= 0; } }
+
+        public LivingCreature(int currentHitPoints, int maximumHitPoints)
+        {
+            CurrentHitPoints = currentHitPoints;
+            MaximumHitPoints = maximumHitPoints;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string name)
@@ -28,11 +36,6 @@ namespace Engine
             }
         }
 
-        public LivingCreature(int currentHitPoints, int maximumHitPoints)
-        {
-            CurrentHitPoints = currentHitPoints;
-            MaximumHitPoints = maximumHitPoints;
-        }
 
     }
 }
