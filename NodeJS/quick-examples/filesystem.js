@@ -1,11 +1,13 @@
-/* Creating a directory */
+/* Read a directory */
 
 const fs = require('fs');
 
-console.log('Going to create directory /tmp/test');
+console.log('Going to read directory /tmp');
 
-fs.mkdir('./tmp/test', {recursive: true}, err => {
+fs.readdir('./tmp/', (err, files) => {
   if (err) return console.error(err);
 
-  console.log('Directory created successfully.');
-})
+  files.forEach( file => {
+    console.log(file);
+  });
+});
