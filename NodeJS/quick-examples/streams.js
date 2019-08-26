@@ -1,24 +1,22 @@
-/* Reading from a Stream */
-
+/* Writing to a Stream */
 const fs = require('fs');
-let data = '';
+data = 'Some Random Text';
 
-// Create a readable stream
-const readerStream = fs.createReadStream('input.txt');
+// Create a writable stream
+const writerStream = fs.createWriteStream('output.txt');
 
-// Set the encoding to utf8
-readerStream.setEncoding('UTF8');
+// Write the data to the stream with encoding utf8
+writerStream.write(data, 'UTF8');
 
-// Handle stream events --> data, end and error
-readerStream.on('data', chunk => {
-  data += chunk;
+// Mark the end of file
+writerStream.end();
+
+// Handle stream events --> finish and error
+writerStream.on('finish', () => {
+  console.log('Write Complete!');
 });
 
-readerStream.on('end', () => {
-  console.log(data);
-});
-
-readerStream.on('error', err => {
+writerStream.on('error', err => {
   console.log(err.stack);
 });
 
