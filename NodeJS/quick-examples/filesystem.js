@@ -1,16 +1,18 @@
-/* Get file information */
+/* Writing a file */
 
 const fs = require('fs');
 
-console.log('Going to get file info!');
+console.log('Going to write into existing file');
 
-fs.stat('input.txt', (err, stats) => {
+fs.writeFile('input.txt', 'Some Random Text', err => {
   if (err) return console.error(err);
 
-  console.log(stats);
-  console.log('Got file info successfully!');
+  console.log('Data written successfully!');
+  console.log("Let's read newly written data");
 
-  // Check file type
-  console.log(`isFile ? ${stats.isFile()}`);
-  console.log(`isDirectory ? ${stats.isDirectory()}`);
+  fs.readFile('input.txt', (err, data) => {
+    if (err) return console.error(err);
+
+    console.log('Asynchronous read: ' + data.toString());
+  });
 });
