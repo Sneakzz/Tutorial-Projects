@@ -1,15 +1,18 @@
-/* Piping Streams */
+/* Chaining Streams */
 
 const fs = require('fs');
+const zlib = require('zlib');
 
-// Create a readable stream
-const readerStream = fs.createReadStream('input.txt');
+// Compress the file input.txt to input.txt.gz
+// fs.createReadStream('input.txt')
+//   .pipe(zlib.createGzip())
+//   .pipe(fs.createWriteStream('input.txt.gz'));
 
-// Create a writable stream
-const writerStream = fs.createWriteStream('output.txt');
+// console.log('File Compressed.');
 
-// Pipe the read and write operations
-// Read input.txt and write data to output.txt
-readerStream.pipe(writerStream);
+// Decompress the file input.txt.gz to input.txt
+fs.createReadStream('input.txt.gz')
+  .pipe(zlib.createGunzip())
+  .pipe(fs.createWriteStream('input.txt'));
 
-console.log('Program Finished');
+console.log('File Decompressed.');
