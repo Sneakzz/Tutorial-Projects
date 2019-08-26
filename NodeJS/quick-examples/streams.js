@@ -1,23 +1,15 @@
-/* Writing to a Stream */
+/* Piping Streams */
+
 const fs = require('fs');
-data = 'Some Random Text';
+
+// Create a readable stream
+const readerStream = fs.createReadStream('input.txt');
 
 // Create a writable stream
 const writerStream = fs.createWriteStream('output.txt');
 
-// Write the data to the stream with encoding utf8
-writerStream.write(data, 'UTF8');
-
-// Mark the end of file
-writerStream.end();
-
-// Handle stream events --> finish and error
-writerStream.on('finish', () => {
-  console.log('Write Complete!');
-});
-
-writerStream.on('error', err => {
-  console.log(err.stack);
-});
+// Pipe the read and write operations
+// Read input.txt and write data to output.txt
+readerStream.pipe(writerStream);
 
 console.log('Program Finished');
