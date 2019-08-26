@@ -1,11 +1,11 @@
-/* Delete a File */
+/* Creating a directory */
 
 const fs = require('fs');
 
-console.log('Going to delete an existing file');
+console.log('Going to create directory /tmp/test');
 
-fs.unlink('input.txt', err => {
+fs.mkdir('./tmp/test', {recursive: true}, err => {
   if (err) return console.error(err);
 
-  console.log('File deleted successfully!');
-});
+  console.log('Directory created successfully.');
+})
