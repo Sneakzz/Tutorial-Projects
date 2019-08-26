@@ -2,11 +2,15 @@
 
 const fs = require('fs');
 
-// Asynchronous - Opening File
-console.log('Going to open file!');
+console.log('Going to get file info!');
 
-fs.open('input.txt', 'r+', (err, fd) => {
+fs.stat('input.txt', (err, stats) => {
   if (err) return console.error(err);
 
-  console.log('File opened successfully!');
+  console.log(stats);
+  console.log('Got file info successfully!');
+
+  // Check file type
+  console.log(`isFile ? ${stats.isFile()}`);
+  console.log(`isDirectory ? ${stats.isDirectory()}`);
 });
