@@ -1,4 +1,4 @@
-/* Reading a file */
+/* Closing a File */
 
 const fs = require('fs');
 const buf = new Buffer(1024);
@@ -14,11 +14,16 @@ fs.open('input.txt', 'r+', (err, fd) => {
   fs.read(fd, buf, 0, buf.length, 0, (err, bytes) => {
     if (err) return console.error(err);
 
-    console.log(`${bytes} bytes read`);
-
     // Print only read bytes to avoid junk.
-    if (bytes > 0 ) {
+    if (bytes > 0) {
       console.log(buf.slice(0, bytes).toString());
     }
+
+    // Close the opened file.
+    fs.close(fd, err => {
+      if (err) return console.error(err);
+
+      console.log('File closed successfully.');
+    });
   });
 });
