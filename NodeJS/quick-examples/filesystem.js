@@ -1,18 +1,24 @@
-/* Writing a file */
+/* Reading a file */
 
 const fs = require('fs');
+const buf = new Buffer(1024);
 
-console.log('Going to write into existing file');
+console.log('Going to open an existing file');
 
-fs.writeFile('input.txt', 'Some Random Text', err => {
+fs.open('input.txt', 'r+', (err, fd) => {
   if (err) return console.error(err);
 
-  console.log('Data written successfully!');
-  console.log("Let's read newly written data");
+  console.log('File opened successfully!');
+  console.log('Going to read the file');
 
-  fs.readFile('input.txt', (err, data) => {
+  fs.read(fd, buf, 0, buf.length, 0, (err, bytes) => {
     if (err) return console.error(err);
 
-    console.log('Asynchronous read: ' + data.toString());
+    console.log(`${bytes} bytes read`);
+
+    // Print only read bytes to avoid junk.
+    if (bytes > 0 ) {
+      console.log(buf.slice(0, bytes).toString());
+    }
   });
 });
