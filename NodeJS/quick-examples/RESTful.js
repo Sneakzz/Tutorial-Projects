@@ -11,6 +11,8 @@ const user = {
   }
 };
 
+const id = 2;
+
 app.get('/listUsers', (req, res) => {
   fs.readFile(__dirname + '/' + 'users.json', 'utf8', (err, data) => {
     if (err) return console.error(err);
@@ -39,6 +41,17 @@ app.get('/:id', (req, res) => {
     const user = users['user' + req.params.id];
     console.log(user);
     res.end(JSON.stringify(user));
+  });
+});
+
+app.delete('/deleteUser', (req, res) => {
+  // First read the existing users
+  fs.readFile(__dirname + '/' + 'users.json', 'utf8', (err, data) => {
+    data = JSON.parse(data);
+    delete data['user' + id];
+
+    console.log(data);
+    res.end(JSON.stringify(data));
   });
 });
 
