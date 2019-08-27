@@ -1,0 +1,12 @@
+{
+  "name": "quick-examples",
+  "version": "1.0.0",
+  "description": "quick examples of different pieces of code commonly used.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Veys Kenny",
+  "license": "ISC"
+}
