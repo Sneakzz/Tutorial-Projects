@@ -32,6 +32,16 @@ app.post('/addUser', (req, res) => {
   });
 });
 
+app.get('/:id', (req, res) => {
+  // First read the existing users
+  fs.readFile(__dirname + '/' + 'users.json', 'utf8', (err, data) => {
+    const users = JSON.parse(data);
+    const user = users['user' + req.params.id];
+    console.log(user);
+    res.end(JSON.stringify(user));
+  });
+});
+
 const server = app.listen(8081, () => {
   const host = server.address().address;
   const port = server.address().port;
