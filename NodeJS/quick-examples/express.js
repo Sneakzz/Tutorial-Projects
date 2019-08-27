@@ -1,19 +1,24 @@
-/* GET Method */
+/* POST Method */
 
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 
+// Create application/x-www-form-urlencoded parser
+const urlEncodedParser = bodyParser.urlencoded({extended: false});
+
+// serve static files
 app.use(express.static('public'));
 
 app.get('/index.html', (req, res) => {
   res.sendFile(__dirname + "/" + "index.html");
 });
 
-app.get('/process_get', (req, res) => {
+app.post('/process_post', urlEncodedParser, (req, res) => {
   // Prepare output in JSON format
   response = {
-    first_name: req.query.first_name,
-    last_name: req.query.last_name
+    first_name: req.body.first_name,
+    last_name: req.body.last_name
   };
 
   console.log(response);
