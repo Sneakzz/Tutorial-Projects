@@ -9,6 +9,7 @@
   "author": "Veys Kenny",
   "license": "ISC",
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "yargs": "^14.0.0"
   }
 }
