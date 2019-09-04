@@ -9,11 +9,12 @@ const app = express();
 mongoose.connect('mongodb://localhost/ninjago', { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
 mongoose.Promise = global.Promise;
 
+app.use(express.static('public'));
+
 app.use(bodyParser.json());
 
 // Initialize routes
 app.use('/api', require('./routes/api'));
-
 
 // Error handling middleware
 app.use((err, req, res, next) => {
