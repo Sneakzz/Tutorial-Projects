@@ -8,6 +8,7 @@ const app = express();
 // Connect to mongodb
 mongoose.connect('mongodb://localhost/ninjago', { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
+mongoose.set('useFindAndModify', false);
 
 app.use(bodyParser.json());
 
