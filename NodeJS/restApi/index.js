@@ -9,6 +9,7 @@ const app = express();
 mongoose.connect('mongodb://localhost/ninjago', { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 app.use(bodyParser.json());
 
