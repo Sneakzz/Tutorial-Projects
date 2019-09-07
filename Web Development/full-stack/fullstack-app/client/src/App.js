@@ -62,11 +62,11 @@ class App extends Component {
 
   // DELETE method that uses the backend api to remove existing data
   deleteFromDb = idToDelete => {
-    parseInt(idToDelete);
+    idToDelete = parseInt(idToDelete);
     let objIdToDelete = null;
-    this.state.data.forEach(data => {
-      if (data.id == idToDelete) {
-        objIdToDelete = data._id;
+    this.state.data.forEach(dat => {
+      if (dat.id === idToDelete) {
+        objIdToDelete = dat._id;
       }
     });
 
@@ -80,10 +80,10 @@ class App extends Component {
   // PUT method that uses the backend api to overwrite existing data
   updateDb = (idToUpdate, updateToApply) => {
     let objIdToUpdate = null;
-    parseInt(idToUpdate);
-    this.state.data.forEach(data => {
-      if (data.id == idToUpdate) {
-        objIdToUpdate = data._id;
+    idToUpdate = parseInt(idToUpdate);
+    this.state.data.forEach(dat => {
+      if (dat.id === idToUpdate) {
+        objIdToUpdate = dat._id;
       }
     });
 
@@ -101,7 +101,7 @@ class App extends Component {
         <ul>
           {
             data.length <= 0 ? 'NO DB ENTRIES YET' : data.map(dat => (
-              <li style={{ padding: '10px' }} key={data.message}>
+              <li style={{ padding: '10px' }} key={dat.id}>
                 <span style={{ color: 'gray' }}> id: </span> {dat.id}  <br />
                 <span style={{ color: 'gray' }}> data: </span> {dat.message}
               </li>
@@ -111,7 +111,7 @@ class App extends Component {
         <div style={{ padding: '10px' }}>
           <input
             type='text'
-            onchange={e => this.setState({ message: e.target.value })}
+            onChange={e => this.setState({ message: e.target.value })}
             placeholder='add something in the database'
             style={{ width: '200px' }}
           />

@@ -27,7 +27,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // to be in a readable json format
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-//app.use(logger('dev'));
+app.use(logger('dev'));
 
 // GET method
 // This method fetches all available data in the database
@@ -57,7 +57,6 @@ router.post('/putData', (req, res) => {
   data.id = id;
   data.save(err => {
     if (err) return res.json({ success: false, error: err });
-
     return res.json({ success: true });
   });
 });
