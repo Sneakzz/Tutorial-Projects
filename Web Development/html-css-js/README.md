@@ -19,7 +19,7 @@ A quick website with a counter
 * CSS3
 * JavaScript
 
-[Live link](https://sneakzz.github.io/Web-Development/html-css-js/Counter/)
+[Live link](https://sneakzz.github.io/Web%20Development/html-css-js/Counter/)
 
 ## First Portfolio Website	
 
@@ -31,7 +31,7 @@ The very first portfolio website i created as part of learning front-end web dev
 * JavaScript	
 * Font Awesome Icons
 
-[Live link](https://sneakzz.github.io/Web-Development/html-css-js/First%20Portfolio%20Website/)
+[Live link](https://sneakzz.github.io/Web%20Development/html-css-js/First%20Portfolio%20Website/)
 
 ### Here are some pictures
 
@@ -111,7 +111,7 @@ This project contains a cheat sheet and simple website landing page showing off 
 
 My current WIP project. Right now it contains and uses static, fake data in a seperate js file.
 
-[Live link](https://sneakzz.github.io/Front-End-Projects/StudentList/)
+[Live link](https://sneakzz.github.io/Web%20Development/StudentList/)
 
 ### Here is a picture
 
