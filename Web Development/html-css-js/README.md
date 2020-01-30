@@ -111,7 +111,7 @@ This project contains a cheat sheet and simple website landing page showing off 
 
 My current WIP project. Right now it contains and uses static, fake data in a seperate js file.
 
-[Live link](https://sneakzz.github.io/Learning-Projects/Web%20Development/StudentList/)
+[Live link](https://sneakzz.github.io/Learning-Projects/Web%20Development/html-css-js/StudentList/)
 
 ### Here is a picture
 
