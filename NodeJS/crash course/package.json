@@ -10,9 +10,9 @@
   "author": "Kenny Veys",
   "license": "ISC",
   "dependencies": {
-    "uuid": "^3.3.3"
+    "uuid": "^3.4.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.4"
   }
 }
